@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{063F1F31-6028-4B8A-A732-86D6C63D22DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FFTool</RootNamespace>
+    <AssemblyName>FFootage</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ffootage.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="commands\ChangeAudioNRCommandUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="commands\ChangeAudioNRCommandUserControl.Designer.cs">
+      <DependentUpon>ChangeAudioNRCommandUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commands\ChangeSpeedCommandUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="commands\ChangeSpeedCommandUserControl.Designer.cs">
+      <DependentUpon>ChangeSpeedCommandUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commands\CommandHostUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="commands\CommandHostUserControl.Designer.cs">
+      <DependentUpon>CommandHostUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commands\CutNRCommandUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="commands\CutNRCommandUserControl.Designer.cs">
+      <DependentUpon>CutNRCommandUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commands\HardcodeSubCommandUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="commands\HardcodeSubCommandUserControl.Designer.cs">
+      <DependentUpon>HardcodeSubCommandUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commands\ICommand.cs" />
+    <Compile Include="commands\IntToProgCommandUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="commands\IntToProgCommandUserControl.Designer.cs">
+      <DependentUpon>IntToProgCommandUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="commands\ResizeCommandUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="commands\ResizeCommandUserControl.Designer.cs">
+      <DependentUpon>ResizeCommandUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="session\SessionDataSet.cs">
+      <DependentUpon>SessionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="session\SessionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SessionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tools\EmbeddedResourceExtractor.cs" />
+    <Compile Include="tools\FFMpegRunner.cs" />
+    <Compile Include="usercontrols\TimeSpanEditUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usercontrols\TimeSpanEditUserControl.Designer.cs">
+      <DependentUpon>TimeSpanEditUserControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="commands\ChangeAudioNRCommandUserControl.resx">
+      <DependentUpon>ChangeAudioNRCommandUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commands\ChangeSpeedCommandUserControl.resx">
+      <DependentUpon>ChangeSpeedCommandUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commands\CommandHostUserControl.resx">
+      <DependentUpon>CommandHostUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commands\CutNRCommandUserControl.resx">
+      <DependentUpon>CutNRCommandUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commands\HardcodeSubCommandUserControl.resx">
+      <DependentUpon>HardcodeSubCommandUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commands\IntToProgCommandUserControl.resx">
+      <DependentUpon>IntToProgCommandUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commands\ResizeCommandUserControl.resx">
+      <DependentUpon>ResizeCommandUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="usercontrols\TimeSpanEditUserControl.resx">
+      <DependentUpon>TimeSpanEditUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="session\SessionDataSet.xsc">
+      <DependentUpon>SessionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="session\SessionDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SessionDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="session\SessionDataSet.xss">
+      <DependentUpon>SessionDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ebin\ffmpeg.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ffootage.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
