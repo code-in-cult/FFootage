@@ -70,8 +70,10 @@ namespace FFTool.commands
 
         public string getOutFileName()
         {
-            return InputFile.Insert(InputFile.LastIndexOf("."), "_"
-                + String.Format(@"CarConv_B{0}_S{1}_%02d", nudVideoBitrate.Value, nudSplitSize.Value));
+            return InputFile.Substring(0, InputFile.LastIndexOf("."))
+                +"_"
+                + String.Format(@"CarConv_B{0}_S{1}_%02d", nudVideoBitrate.Value, nudSplitSize.Value)
+                +".mp4";//here we force the mp4 format
         }
 
         public string getTitle()
