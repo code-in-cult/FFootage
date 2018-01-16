@@ -124,6 +124,11 @@ namespace FFTool
                     HardcodeSubCommandUserControl cutnr = new HardcodeSubCommandUserControl() { Settings = ci.Settings };
                     addCommandAsTabPage(cutnr);
                 }
+                else if (ci.Type == new CarPlayerConversionCommandUserControl().Type())
+                {
+                    CarPlayerConversionCommandUserControl cutnr = new CarPlayerConversionCommandUserControl() { Settings = ci.Settings };
+                    addCommandAsTabPage(cutnr);
+                }
             }
         }
 
@@ -171,6 +176,12 @@ namespace FFTool
         private void btHardcodeSub_Click(object sender, EventArgs e)
         {
             HardcodeSubCommandUserControl cutnr = new HardcodeSubCommandUserControl();
+            addCommandAsTabPage(cutnr);
+        }
+
+        private void btCarPlayerConv_Click(object sender, EventArgs e)
+        {
+            CarPlayerConversionCommandUserControl cutnr = new CarPlayerConversionCommandUserControl();
             addCommandAsTabPage(cutnr);
         }
     }

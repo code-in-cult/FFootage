@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbCommands = new System.Windows.Forms.GroupBox();
             this.btKillAllffmpeg = new System.Windows.Forms.Button();
+            this.btHardcodeSub = new System.Windows.Forms.Button();
             this.btResize = new System.Windows.Forms.Button();
             this.btChangeSpeed = new System.Windows.Forms.Button();
             this.btInterlacedToProgressive = new System.Windows.Forms.Button();
@@ -39,7 +40,7 @@
             this.tcCommandInstances = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btHardcodeSub = new System.Windows.Forms.Button();
+            this.btCarPlayerConv = new System.Windows.Forms.Button();
             this.gbCommands.SuspendLayout();
             this.tcCommandInstances.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             this.gbCommands.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gbCommands.Controls.Add(this.btKillAllffmpeg);
+            this.gbCommands.Controls.Add(this.btCarPlayerConv);
             this.gbCommands.Controls.Add(this.btHardcodeSub);
             this.gbCommands.Controls.Add(this.btResize);
             this.gbCommands.Controls.Add(this.btChangeSpeed);
@@ -72,6 +74,16 @@
             this.btKillAllffmpeg.Text = "Kill ffmpeg";
             this.btKillAllffmpeg.UseVisualStyleBackColor = true;
             this.btKillAllffmpeg.Click += new System.EventHandler(this.btKillAllffmpeg_Click);
+            // 
+            // btHardcodeSub
+            // 
+            this.btHardcodeSub.Location = new System.Drawing.Point(6, 165);
+            this.btHardcodeSub.Name = "btHardcodeSub";
+            this.btHardcodeSub.Size = new System.Drawing.Size(116, 23);
+            this.btHardcodeSub.TabIndex = 0;
+            this.btHardcodeSub.Text = "Hardcode Sub.";
+            this.btHardcodeSub.UseVisualStyleBackColor = true;
+            this.btHardcodeSub.Click += new System.EventHandler(this.btHardcodeSub_Click);
             // 
             // btResize
             // 
@@ -156,15 +168,15 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btHardcodeSub
+            // btCarPlayerConv
             // 
-            this.btHardcodeSub.Location = new System.Drawing.Point(6, 165);
-            this.btHardcodeSub.Name = "btHardcodeSub";
-            this.btHardcodeSub.Size = new System.Drawing.Size(116, 23);
-            this.btHardcodeSub.TabIndex = 0;
-            this.btHardcodeSub.Text = "Hardcode Sub.";
-            this.btHardcodeSub.UseVisualStyleBackColor = true;
-            this.btHardcodeSub.Click += new System.EventHandler(this.btHardcodeSub_Click);
+            this.btCarPlayerConv.Location = new System.Drawing.Point(7, 194);
+            this.btCarPlayerConv.Name = "btCarPlayerConv";
+            this.btCarPlayerConv.Size = new System.Drawing.Size(116, 23);
+            this.btCarPlayerConv.TabIndex = 0;
+            this.btCarPlayerConv.Text = "Car Player Conv.";
+            this.btCarPlayerConv.UseVisualStyleBackColor = true;
+            this.btCarPlayerConv.Click += new System.EventHandler(this.btCarPlayerConv_Click);
             // 
             // MainForm
             // 
@@ -197,6 +209,7 @@
         private System.Windows.Forms.Button btChangeSpeed;
         private System.Windows.Forms.Button btResize;
         private System.Windows.Forms.Button btHardcodeSub;
+        private System.Windows.Forms.Button btCarPlayerConv;
     }
 }
 
