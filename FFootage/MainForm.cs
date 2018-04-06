@@ -129,6 +129,11 @@ namespace FFTool
                     CarPlayerConversionCommandUserControl cutnr = new CarPlayerConversionCommandUserControl() { Settings = ci.Settings };
                     addCommandAsTabPage(cutnr);
                 }
+                else if (ci.Type == new CropCommandUserControl().Type())
+                {
+                    CropCommandUserControl cutnr = new CropCommandUserControl() { Settings = ci.Settings };
+                    addCommandAsTabPage(cutnr);
+                }
             }
         }
 
@@ -182,6 +187,12 @@ namespace FFTool
         private void btCarPlayerConv_Click(object sender, EventArgs e)
         {
             CarPlayerConversionCommandUserControl cutnr = new CarPlayerConversionCommandUserControl();
+            addCommandAsTabPage(cutnr);
+        }
+
+        private void btCrop_Click(object sender, EventArgs e)
+        {
+            CropCommandUserControl cutnr = new CropCommandUserControl();
             addCommandAsTabPage(cutnr);
         }
     }

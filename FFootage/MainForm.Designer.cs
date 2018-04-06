@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbCommands = new System.Windows.Forms.GroupBox();
             this.btKillAllffmpeg = new System.Windows.Forms.Button();
+            this.btCarPlayerConv = new System.Windows.Forms.Button();
             this.btHardcodeSub = new System.Windows.Forms.Button();
             this.btResize = new System.Windows.Forms.Button();
             this.btChangeSpeed = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.tcCommandInstances = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btCarPlayerConv = new System.Windows.Forms.Button();
+            this.btCrop = new System.Windows.Forms.Button();
             this.gbCommands.SuspendLayout();
             this.tcCommandInstances.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             this.gbCommands.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gbCommands.Controls.Add(this.btKillAllffmpeg);
+            this.gbCommands.Controls.Add(this.btCrop);
             this.gbCommands.Controls.Add(this.btCarPlayerConv);
             this.gbCommands.Controls.Add(this.btHardcodeSub);
             this.gbCommands.Controls.Add(this.btResize);
@@ -74,6 +76,16 @@
             this.btKillAllffmpeg.Text = "Kill ffmpeg";
             this.btKillAllffmpeg.UseVisualStyleBackColor = true;
             this.btKillAllffmpeg.Click += new System.EventHandler(this.btKillAllffmpeg_Click);
+            // 
+            // btCarPlayerConv
+            // 
+            this.btCarPlayerConv.Location = new System.Drawing.Point(7, 194);
+            this.btCarPlayerConv.Name = "btCarPlayerConv";
+            this.btCarPlayerConv.Size = new System.Drawing.Size(116, 23);
+            this.btCarPlayerConv.TabIndex = 0;
+            this.btCarPlayerConv.Text = "Car Player Conv.";
+            this.btCarPlayerConv.UseVisualStyleBackColor = true;
+            this.btCarPlayerConv.Click += new System.EventHandler(this.btCarPlayerConv_Click);
             // 
             // btHardcodeSub
             // 
@@ -168,15 +180,15 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btCarPlayerConv
+            // btCrop
             // 
-            this.btCarPlayerConv.Location = new System.Drawing.Point(7, 194);
-            this.btCarPlayerConv.Name = "btCarPlayerConv";
-            this.btCarPlayerConv.Size = new System.Drawing.Size(116, 23);
-            this.btCarPlayerConv.TabIndex = 0;
-            this.btCarPlayerConv.Text = "Car Player Conv.";
-            this.btCarPlayerConv.UseVisualStyleBackColor = true;
-            this.btCarPlayerConv.Click += new System.EventHandler(this.btCarPlayerConv_Click);
+            this.btCrop.Location = new System.Drawing.Point(6, 223);
+            this.btCrop.Name = "btCrop";
+            this.btCrop.Size = new System.Drawing.Size(116, 23);
+            this.btCrop.TabIndex = 0;
+            this.btCrop.Text = "Crop";
+            this.btCrop.UseVisualStyleBackColor = true;
+            this.btCrop.Click += new System.EventHandler(this.btCrop_Click);
             // 
             // MainForm
             // 
@@ -210,6 +222,7 @@
         private System.Windows.Forms.Button btResize;
         private System.Windows.Forms.Button btHardcodeSub;
         private System.Windows.Forms.Button btCarPlayerConv;
+        private System.Windows.Forms.Button btCrop;
     }
 }
 
