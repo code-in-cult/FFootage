@@ -12,7 +12,7 @@ namespace FFTool.commands
 {
     public partial class CarPlayerConversionCommandUserControl : UserControl, ICommand
     {
-        public const string Command = @"-y -i ""{0}"" -vf scale=480:272 -c:v mpeg4  -vb {1}k -c:a aac -b:a 64k -f segment -segment_time {2} ""{3}""";
+        public const string Command = @"-y -i ""{0}"" -vf scale=480:272 -c:v mpeg4  -vb {1}k -c:a aac -b:a 64k -f segment -segment_time {2} {3}""{4}""";
         public CarPlayerConversionCommandUserControl()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace FFTool.commands
         {
             get
             {
-                return String.Format(@"File={0}#VideoBitrate={1}#SplitSize={2}", InputFile, nudVideoBitrate.Value, nudSplitSize.Value);
+                return String.Format(@"File={0}#VideoBitrate={1}#SplitSize={2}#NormalizeAudio={3}", InputFile, nudVideoBitrate.Value, nudSplitSize.Value, cbNormalizeAudio.Checked);
             }
             set
             {
@@ -46,6 +46,10 @@ namespace FFTool.commands
                         {
                             nudSplitSize.Value = Int32.Parse(kv[1]);
                         }
+                        else if (kv[0] == "NormalizeAudio")
+                        {
+                            cbNormalizeAudio.Checked = Boolean.Parse(kv[1]);
+                        }
                     }
                 }
                 catch(Exception ee)
@@ -63,6 +67,7 @@ namespace FFTool.commands
             string command = String.Format(new System.Globalization.CultureInfo("en-US"), Command, InputFile
                 , nudVideoBitrate.Value
                 , (nudSplitSize.Value==0?1000000: nudSplitSize.Value*60)
+                , (cbNormalizeAudio.Checked? /*"-filter:a dynaudnorm "*/" -af \"compand=0|0:1|1:-90/-900|-70/-70|-30/-9|0/-3:6:0:0:0\" " : "")
                 , outFileName);
 
             return command;
@@ -72,7 +77,7 @@ namespace FFTool.commands
         {
             return InputFile.Substring(0, InputFile.LastIndexOf("."))
                 +"_"
-                + String.Format(@"CarConv_B{0}_S{1}_%02d", nudVideoBitrate.Value, nudSplitSize.Value)
+                + String.Format(@"CarConv_B{0}_S{1}_N{2}_%02d", nudVideoBitrate.Value, nudSplitSize.Value, cbNormalizeAudio.Checked)
                 +".mp4";//here we force the mp4 format
         }
 

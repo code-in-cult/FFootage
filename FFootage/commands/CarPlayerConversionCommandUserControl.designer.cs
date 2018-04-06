@@ -32,6 +32,7 @@
             this.nudSplitSize = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbNormalizeAudio = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudVideoBitrate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSplitSize)).BeginInit();
             this.SuspendLayout();
@@ -87,10 +88,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Split size (minute, 0 = no split)";
             // 
+            // cbNormalizeAudio
+            // 
+            this.cbNormalizeAudio.AutoSize = true;
+            this.cbNormalizeAudio.Location = new System.Drawing.Point(225, 20);
+            this.cbNormalizeAudio.Name = "cbNormalizeAudio";
+            this.cbNormalizeAudio.Size = new System.Drawing.Size(101, 17);
+            this.cbNormalizeAudio.TabIndex = 2;
+            this.cbNormalizeAudio.Text = "Loudness norm.";
+            this.cbNormalizeAudio.UseVisualStyleBackColor = true;
+            // 
             // CarPlayerConversionCommandUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbNormalizeAudio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nudSplitSize);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.NumericUpDown nudSplitSize;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox cbNormalizeAudio;
     }
 }
