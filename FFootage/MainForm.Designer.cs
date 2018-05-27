@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.gbCommands = new System.Windows.Forms.GroupBox();
             this.btKillAllffmpeg = new System.Windows.Forms.Button();
+            this.btCrop = new System.Windows.Forms.Button();
             this.btCarPlayerConv = new System.Windows.Forms.Button();
             this.btHardcodeSub = new System.Windows.Forms.Button();
             this.btResize = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.tcCommandInstances = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btCrop = new System.Windows.Forms.Button();
+            this.btConvertToMpThree = new System.Windows.Forms.Button();
             this.gbCommands.SuspendLayout();
             this.tcCommandInstances.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             this.gbCommands.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gbCommands.Controls.Add(this.btKillAllffmpeg);
+            this.gbCommands.Controls.Add(this.btConvertToMpThree);
             this.gbCommands.Controls.Add(this.btCrop);
             this.gbCommands.Controls.Add(this.btCarPlayerConv);
             this.gbCommands.Controls.Add(this.btHardcodeSub);
@@ -76,6 +78,16 @@
             this.btKillAllffmpeg.Text = "Kill ffmpeg";
             this.btKillAllffmpeg.UseVisualStyleBackColor = true;
             this.btKillAllffmpeg.Click += new System.EventHandler(this.btKillAllffmpeg_Click);
+            // 
+            // btCrop
+            // 
+            this.btCrop.Location = new System.Drawing.Point(6, 223);
+            this.btCrop.Name = "btCrop";
+            this.btCrop.Size = new System.Drawing.Size(116, 23);
+            this.btCrop.TabIndex = 0;
+            this.btCrop.Text = "Crop";
+            this.btCrop.UseVisualStyleBackColor = true;
+            this.btCrop.Click += new System.EventHandler(this.btCrop_Click);
             // 
             // btCarPlayerConv
             // 
@@ -180,15 +192,15 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btCrop
+            // btConvertToMpThree
             // 
-            this.btCrop.Location = new System.Drawing.Point(6, 223);
-            this.btCrop.Name = "btCrop";
-            this.btCrop.Size = new System.Drawing.Size(116, 23);
-            this.btCrop.TabIndex = 0;
-            this.btCrop.Text = "Crop";
-            this.btCrop.UseVisualStyleBackColor = true;
-            this.btCrop.Click += new System.EventHandler(this.btCrop_Click);
+            this.btConvertToMpThree.Location = new System.Drawing.Point(6, 252);
+            this.btConvertToMpThree.Name = "btConvertToMpThree";
+            this.btConvertToMpThree.Size = new System.Drawing.Size(116, 23);
+            this.btConvertToMpThree.TabIndex = 0;
+            this.btConvertToMpThree.Text = "Convert To Mp3";
+            this.btConvertToMpThree.UseVisualStyleBackColor = true;
+            this.btConvertToMpThree.Click += new System.EventHandler(this.btConvertToMpThree_Click);
             // 
             // MainForm
             // 
@@ -223,6 +235,7 @@
         private System.Windows.Forms.Button btHardcodeSub;
         private System.Windows.Forms.Button btCarPlayerConv;
         private System.Windows.Forms.Button btCrop;
+        private System.Windows.Forms.Button btConvertToMpThree;
     }
 }
 

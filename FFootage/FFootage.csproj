@@ -71,6 +71,12 @@
     <Compile Include="commands\CommandHostUserControl.Designer.cs">
       <DependentUpon>CommandHostUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="commands\ConvertToMPThreeCommandUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="commands\ConvertToMPThreeCommandUserControl.Designer.cs">
+      <DependentUpon>ConvertToMPThreeCommandUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="commands\CropCommandUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="commands\CommandHostUserControl.resx">
       <DependentUpon>CommandHostUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="commands\ConvertToMPThreeCommandUserControl.resx">
+      <DependentUpon>ConvertToMPThreeCommandUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="commands\CropCommandUserControl.resx">
       <DependentUpon>CropCommandUserControl.cs</DependentUpon>

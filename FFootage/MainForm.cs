@@ -134,6 +134,11 @@ namespace FFTool
                     CropCommandUserControl cutnr = new CropCommandUserControl() { Settings = ci.Settings };
                     addCommandAsTabPage(cutnr);
                 }
+                else if (ci.Type == new ConvertToMPThreeCommandUserControl().Type())
+                {
+                    ConvertToMPThreeCommandUserControl cutnr = new ConvertToMPThreeCommandUserControl() { Settings = ci.Settings };
+                    addCommandAsTabPage(cutnr);
+                }
             }
         }
 
@@ -193,6 +198,12 @@ namespace FFTool
         private void btCrop_Click(object sender, EventArgs e)
         {
             CropCommandUserControl cutnr = new CropCommandUserControl();
+            addCommandAsTabPage(cutnr);
+        }
+
+        private void btConvertToMpThree_Click(object sender, EventArgs e)
+        {
+            ConvertToMPThreeCommandUserControl cutnr = new ConvertToMPThreeCommandUserControl();
             addCommandAsTabPage(cutnr);
         }
     }
